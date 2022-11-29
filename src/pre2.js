@@ -159,6 +159,7 @@ function __displayLobby() {
     // displays lobby
     document.getElementById("lobbyDiv").style = "display:block";
     document.getElementById("preLobbyDiv").style = "display:none";
+    
 
 
     inLobby.loadLobbyName();

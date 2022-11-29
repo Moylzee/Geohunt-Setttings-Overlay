@@ -52,7 +52,10 @@
 
     <div style="display: none" id="lobbyDiv" class="gameContainer">
       <div class="wrapper">
-        <div class="title"><span id="lobbyTitle">Lobby Name</span></div>
+        <div class="title">
+          <span id="lobbyTitle">Lobby Name</span>
+          <button id="settingsBtn" onclick="openSettings()">Settings</button>
+        </div>
         <div class="player-list">
           <center>
             <ul id="myList">
@@ -61,6 +64,13 @@
 
             <div id="startGameDiv" style="display: none">
               <button id="startGameBtn">Start</button>
+            </div>
+
+            <div id="settings-overlay" class="settings-overlay" style="display: none;">
+              <button href="javascript:void(0)" class="closebtn" onclick="closeSettings()">&times;</button>
+              <div class="overlay-content">
+                This is where the settings will go
+              </div>
             </div>
           </center>
         </div>
@@ -73,8 +83,22 @@
       </div>
 
     </section>
+
+
+
   </main>
   <script src="bundle.js"></script>
+
+<script>
+  function openSettings() {
+    document.getElementById("settings-overlay").style.display = "block";
+  }
+
+  function closeSettings() {
+    document.getElementById("settings-overlay").style.display = "none";
+  }
+</script>
+
 
 
 </body>

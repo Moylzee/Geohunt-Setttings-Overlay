@@ -26,7 +26,6 @@ export function loadUser(displayname, host) {
     node.appendChild(userNode);
 }
 
-
 export function listener(lobbyname) {
     const lobRef = ref(database, lobbyname.value + "/users")
     onValue(lobRef, (snap) => {
